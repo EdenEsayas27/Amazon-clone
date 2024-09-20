@@ -1,17 +1,13 @@
 import { useState } from 'react'
 import './App.css'
-import Header from './Components/Header/Header'
-import CarouselEffect from './Components/Carousel/CarouselEffect'
-import Catagory from './Components/Catagory/Catagory'
+import Landing from './pages/Landing/Landing'
 
 function App() {
   
 
   return (
     <>
-   <Header />
-   <CarouselEffect />
-   <Catagory />
+    <Landing />
     </>
   )
 }
