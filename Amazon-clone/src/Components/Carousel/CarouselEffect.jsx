@@ -14,8 +14,8 @@ function CarouselEffect() {
         interval={3000} // Set the interval in milliseconds
         stopOnHover={true}
       >
-        {img.map((imageLink) => {
-          return <img src={imageLink} />;
+        {img.map((imageLink,index) => {
+          return <img  key={index} src={imageLink} />;
         })}
       </Carousel>
        <div className={classes.hero__img}></div> 
