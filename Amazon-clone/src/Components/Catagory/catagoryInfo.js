@@ -6,9 +6,8 @@ export const catagoryInfo = [
   },
   {
     title: "Discover Fashion Trends",
-    name: "Women's clothing",
+    name: "women's%20clothing",
     imageLink: "https://m.media-amazon.com/images/I/716DeQPeSPL._AC_UL320_.jpg",
-    //     https://m.media-amazon.com/images/I/51RF10PuQaL._AC_SY500_.jpg
   },
   {
     title: "Men's clothing",
