@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import './App.css'
-import Landing from './pages/Landing/Landing'
+import Routing from './Router'
 
 function App() {
   
 
   return (
     <>
-    <Landing />
+    <Routing/>
     </>
   )
 }
