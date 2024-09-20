@@ -30,7 +30,7 @@ function ProductDetail() {
       {loading ? ( // Show loading message while fetching
        <Loader />
       ) : product ? ( // Check if product data exists
-        <ProductCard product={product} />
+        <ProductCard product={product} flex={true} renderDesc={true}/>
       ) : (
         <p>Product not found.</p> // Handle case where product is not found
       )}
