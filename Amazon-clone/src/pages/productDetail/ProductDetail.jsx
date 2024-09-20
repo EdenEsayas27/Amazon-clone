@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import ProductCard from "../../Components/Product/ProductCard";
 import { productUrl } from "../../Api/endPoint";
+import Loader from "../../Components/Loader/Loader";
 
 function ProductDetail() {
   const { productId } = useParams();
@@ -11,7 +12,7 @@ function ProductDetail() {
   const [loading, setLoading] = useState(true); // Loading state
 
   useEffect(() => {
-    setLoading(true); // Set loading to true before the request
+    // Set loading to true before the request
     axios
       .get(`${productUrl}/products/${productId}`)
       .then((res) => {
@@ -27,7 +28,7 @@ function ProductDetail() {
   return (
     <Layout>
       {loading ? ( // Show loading message while fetching
-        <p>Loading...</p>
+       <Loader />
       ) : product ? ( // Check if product data exists
         <ProductCard product={product} />
       ) : (
