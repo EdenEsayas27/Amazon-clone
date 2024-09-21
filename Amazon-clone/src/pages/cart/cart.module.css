@@ -4,7 +4,10 @@
     margin-top: 20px;
 }
 .container img{
-    width:100px !important
+    width:80px !important
+}
+.container div:not(.subtotal){
+    height:auto !important;
 }
 .cart__container{
     padding: 20px;
