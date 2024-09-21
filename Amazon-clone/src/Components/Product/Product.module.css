@@ -30,6 +30,7 @@
     left:0;
 }
 .button:hover{
+    display:block;
     background-color: var(--primary-shade);
 }
 .rating{

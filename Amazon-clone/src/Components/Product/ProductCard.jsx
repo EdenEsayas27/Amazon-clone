@@ -43,11 +43,14 @@ function ProductCard({ product, flex, renderDesc ,renderAdd}) {
         <div>
           <CurrencyFormater amount={price} />
         </div>
-        { renderAdd && 
-          <button className={classes.button} onClick={addToCart}>
-            Add to Cart
-          </button>
-        }
+        
+        <div>
+          {renderAdd && (
+            <button className={classes.button} onClick={addToCart}>
+              Add to Cart
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );

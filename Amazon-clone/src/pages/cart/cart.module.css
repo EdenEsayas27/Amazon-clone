@@ -6,6 +6,27 @@
 .container img{
     width:80px !important
 }
+.cart__product{
+    display:flex;
+    gap:10px;
+}
+.btn__container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+}
+.btn{
+    padding:5px 16px;
+    font-weight: bold;
+    cursor:pointer;
+    background-color: white;
+    border:none;
+}
+.btn  svg:hover{
+    background-color: var(--primary-color);
+}
 .container div:not(.subtotal){
     height:auto !important;
 }
@@ -22,6 +43,7 @@
 }
 .subtotal{
     padding: 20px;
+    margin-right: 20px;
     max-width: 300px;
     height: 80%;
     display :flex;
