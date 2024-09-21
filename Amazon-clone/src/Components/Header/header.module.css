@@ -147,3 +147,8 @@
     display:none;
    }
 }
+.fixed__header{
+    top:0;
+    position: sticky;
+    z-index: 100;
+}

@@ -10,6 +10,7 @@ function Header() {
   const[{basket},dispatch]=useContext(DataContext)
   return (
     <>
+    <section className={classes.fixed__header}>
       <section>
         <section>
           <div className={classes.header__container}>
@@ -64,6 +65,7 @@ function Header() {
         </section>
       </section>
       <LowerHeader />
+      </section>
     </>
   );
 }
