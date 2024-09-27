@@ -79,4 +79,7 @@
         flex-direction: column;
         order:1;
     }
+    .subtotal {
+        margin:40px;
+    }
 }

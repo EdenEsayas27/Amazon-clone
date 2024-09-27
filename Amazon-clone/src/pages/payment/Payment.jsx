@@ -9,8 +9,9 @@ import { axiosInstance } from '../../Api/axios'
 import { ClipLoader } from "react-spinners";
 import { db } from '../../Components/utility/firebase'
 import { useNavigate } from 'react-router-dom'
+import { Type } from '../../Components/utility/action.type'
 function Payment() {
-  const [{ user, basket }] = useContext(DataContext);
+  const [{ user, basket },dispatch] = useContext(DataContext);
   const totalItem = basket?.reduce((amount, item) => {
     return item.amount + amount;
   }, 0);
@@ -45,15 +46,22 @@ function Payment() {
       });
       //console.log(paymentIntent);//confirmation.paymentIntent
       //3 after  the confirmation -->order firestore database save,clear basket
-      await db.collection("users").doc(user.uid).collection("orders").doc(paymentIntent.id)
-      .set({
-        basket:basket,
-        amount:paymentIntent.amount,
-        created:paymentIntent.created
-
-      });
+      await db
+        .collection("users")
+        .doc(user.uid)
+        .collection("orders")
+        .doc(paymentIntent.id)
+        .set({
+          basket: basket,
+          amount: paymentIntent.amount,
+          created: paymentIntent.created,
+        });
+      //empty the basket aftr the order make
+          dispatch({
+            type:Type.EMPTY_BASKET
+          })
       setProcessing(false);
-      navigate("/orders",{state:{msg:"you have placed new order"}})
+      navigate("/orders", { state: { msg: "you have placed new order" } });
     }catch(error){
          console.log(error);
          setProcessing(false);

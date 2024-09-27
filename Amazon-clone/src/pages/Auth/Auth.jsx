@@ -78,7 +78,7 @@ function Auth() {
         {/* form */}
         <div className={classes.login__container}>
           <h1>Sign In</h1>{
-            navStateData?.state.msg && (
+            navStateData?.state?.msg && (
               <small
                  style={{
                   padding:"5px",

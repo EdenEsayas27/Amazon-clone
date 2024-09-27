@@ -1,5 +1,5 @@
 .catagory{
-    height:320px;
+    height:300px;
     width:250px;
     background-color: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -7,7 +7,7 @@
 .catagory img{
     width : 100%;
     object-fit: contain;
-    max-height: 250px;
+    max-height: 200px;
     padding:0px 10px;
 }
 .catagory a {
@@ -28,8 +28,12 @@
 }
 .catagory__container{
     position: relative;
-    margin-top: -10%;
+    margin-top: -12%;
     display:grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(auto-fit, minmax(310px ,1fr));
+    max-width: 1600px;
+    gap:20px;
     place-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
