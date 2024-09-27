@@ -13,14 +13,14 @@ app.get("/", (req, res) => {
 });
 
 app.post("/payment/create", async (req, res) => {
-  const total = req.query.total; // Convert to number
+  const total = parseInt(req.query.total); // Convert to number
   if (total > 0) {
     const paymentIntent = await stripe.paymentIntents.create({
       amount: total,
       currency: "usd",
     });
     res.status(201).json({
-      clientSecret: paymentIntent.client_secret, // Correct property name
+      clientSecret: paymentIntent.client_secret, 
     });
   } else {
     res.status(403).json({
