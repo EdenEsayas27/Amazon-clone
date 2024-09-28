@@ -6,4 +6,4 @@ const axiosInstance = axios.create({
    baseURL:"https://amazon-api-deploy-1-dfxs.onrender.com/"
 })
 export {axiosInstance};
-git rebase -i HEAD~n
+
